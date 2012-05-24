@@ -21,6 +21,9 @@
 		8123663D156EA1EE00E46576 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8123661B156EA1EE00E46576 /* Foundation.framework */; };
 		81236645156EA1EE00E46576 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81236643156EA1EE00E46576 /* InfoPlist.strings */; };
 		81236648156EA1EF00E46576 /* AudioTrackSelectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81236647156EA1EF00E46576 /* AudioTrackSelectionTests.m */; };
+		81236652156EA7BF00E46576 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81236651156EA7BF00E46576 /* AVFoundation.framework */; };
+		81236654156EB14500E46576 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81236653156EB14500E46576 /* Security.framework */; };
+		81236657156EC1B600E46576 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81236656156EC1B600E46576 /* PlayerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +41,26 @@
 		81236619156EA1EE00E46576 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8123661B156EA1EE00E46576 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8123661D156EA1EE00E46576 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		81236621156EA1EE00E46576 /* AudioTrackSelection-Info.plist */ = {isa = PBXFileReference; path = "AudioTrackSelection-Info.plist"; sourceTree = "<group>"; };
+		81236621156EA1EE00E46576 /* AudioTrackSelection-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AudioTrackSelection-Info.plist"; sourceTree = "<group>"; };
 		81236623156EA1EE00E46576 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		81236625156EA1EE00E46576 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		81236627156EA1EE00E46576 /* AudioTrackSelection-Prefix.pch */ = {isa = PBXFileReference; path = "AudioTrackSelection-Prefix.pch"; sourceTree = "<group>"; };
-		81236628156EA1EE00E46576 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		81236627156EA1EE00E46576 /* AudioTrackSelection-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioTrackSelection-Prefix.pch"; sourceTree = "<group>"; };
+		81236628156EA1EE00E46576 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		81236629156EA1EE00E46576 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8123662C156EA1EE00E46576 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		8123662F156EA1EE00E46576 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		81236631156EA1EE00E46576 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		81236631156EA1EE00E46576 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		81236632156EA1EE00E46576 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		81236639156EA1EE00E46576 /* AudioTrackSelectionTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioTrackSelectionTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8123663A156EA1EE00E46576 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		81236642156EA1EE00E46576 /* AudioTrackSelectionTests-Info.plist */ = {isa = PBXFileReference; path = "AudioTrackSelectionTests-Info.plist"; sourceTree = "<group>"; };
+		81236642156EA1EE00E46576 /* AudioTrackSelectionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AudioTrackSelectionTests-Info.plist"; sourceTree = "<group>"; };
 		81236644156EA1EE00E46576 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		81236646156EA1EE00E46576 /* AudioTrackSelectionTests.h */ = {isa = PBXFileReference; path = AudioTrackSelectionTests.h; sourceTree = "<group>"; };
+		81236646156EA1EE00E46576 /* AudioTrackSelectionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioTrackSelectionTests.h; sourceTree = "<group>"; };
 		81236647156EA1EF00E46576 /* AudioTrackSelectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioTrackSelectionTests.m; sourceTree = "<group>"; };
+		81236651156EA7BF00E46576 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		81236653156EB14500E46576 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		81236655156EC1B600E46576 /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
+		81236656156EC1B600E46576 /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81236654156EB14500E46576 /* Security.framework in Frameworks */,
+				81236652156EA7BF00E46576 /* AVFoundation.framework in Frameworks */,
 				8123661A156EA1EE00E46576 /* UIKit.framework in Frameworks */,
 				8123661C156EA1EE00E46576 /* Foundation.framework in Frameworks */,
 				8123661E156EA1EE00E46576 /* CoreGraphics.framework in Frameworks */,
@@ -102,6 +111,8 @@
 		81236618156EA1EE00E46576 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81236653156EB14500E46576 /* Security.framework */,
+				81236651156EA7BF00E46576 /* AVFoundation.framework */,
 				81236619156EA1EE00E46576 /* UIKit.framework */,
 				8123661B156EA1EE00E46576 /* Foundation.framework */,
 				8123661D156EA1EE00E46576 /* CoreGraphics.framework */,
@@ -120,6 +131,8 @@
 				81236631156EA1EE00E46576 /* ViewController.h */,
 				81236632156EA1EE00E46576 /* ViewController.m */,
 				81236620156EA1EE00E46576 /* Supporting Files */,
+				81236655156EC1B600E46576 /* PlayerView.h */,
+				81236656156EC1B600E46576 /* PlayerView.m */,
 			);
 			path = AudioTrackSelection;
 			sourceTree = "<group>";
@@ -265,6 +278,7 @@
 				81236626156EA1EE00E46576 /* main.m in Sources */,
 				8123662A156EA1EE00E46576 /* AppDelegate.m in Sources */,
 				81236633156EA1EE00E46576 /* ViewController.m in Sources */,
+				81236657156EC1B600E46576 /* PlayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

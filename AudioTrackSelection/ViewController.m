@@ -10,6 +10,10 @@
 
 @implementation ViewController
 
+@synthesize playerItem;
+@synthesize player;
+@synthesize playerView;
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -21,7 +25,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSURL* url = [NSURL URLWithString:@"https://devimages.apple.com.edgekey.net/resources/http-streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8"];
+    self.playerItem = [AVPlayerItem playerItemWithURL:url];
+    [playerItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+	self.player = [AVPlayer playerWithPlayerItem:playerItem];
+    self.playerView = [[PlayerView alloc] initWithFrame:CGRectMake(0, 0, 320, 180)];
+    [self.view addSubview:playerView];
+    [playerView setPlayer:player];
 }
 
 - (void)viewDidUnload
@@ -61,4 +72,15 @@
     }
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"status"]) {
+        NSArray* tracks = [playerItem tracks];        
+        for (AVPlayerItemTrack *track in tracks) {
+            NSLog(@"Track Lang: %@", [track.assetTrack languageCode]);
+        }
+        NSLog(@"Lang?: %@", playerItem.accessLog);
+        player.closedCaptionDisplayEnabled = YES;
+        [player play];
+    }
+}
 @end
