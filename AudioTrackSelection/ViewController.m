@@ -74,12 +74,13 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"status"]) {
-        NSArray* tracks = [playerItem tracks];        
-        for (AVPlayerItemTrack *track in tracks) {
-            NSLog(@"Track Lang: %@", [track.assetTrack languageCode]);
-        }
-        NSLog(@"Lang?: %@", playerItem.accessLog);
         player.closedCaptionDisplayEnabled = YES;
+        [playerItem.asset loadValuesAsynchronouslyForKeys:[NSArray arrayWithObject:@"availableMediaCharacteristicsWithMediaSelectionOptions"] completionHandler:^(){
+            NSLog(@"%@", [playerItem.asset availableMediaCharacteristicsWithMediaSelectionOptions]);
+            NSLog(@"%@", [playerItem.asset mediaSelectionGroupForMediaCharacteristic:AVMediaCharacteristicAudible]);
+            AVMediaSelectionGroup*  audioTracks = [playerItem.asset mediaSelectionGroupForMediaCharacteristic:AVMediaCharacteristicAudible];
+            [playerItem selectMediaOption:[[audioTracks options] lastObject] inMediaSelectionGroup:audioTracks];
+        }];
         [player play];
     }
 }
